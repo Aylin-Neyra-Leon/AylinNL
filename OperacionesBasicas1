@@ -1,0 +1,39 @@
+package Operaciones;
+import javax.swing.JOptionPane;
+public class OperacionesBasicas {
+    //Atributos
+    int num1;
+    int num2;
+    int suma;
+    int resta;
+    int multi;
+    int divi;
+    //Métodos  //Método para pedir dos números
+    public void leernumeros(){
+        num1 = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el primer número: "));
+        num2 = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el segundo número: "));
+    }
+    //Método para sumar los dos números
+    public void sumar(){
+        suma = num1+num2;
+    }
+    //Método para restar los dos números    
+    public void resta(){
+        resta = num1-num2;
+    }
+    //Método para multiplicar los dos números
+    public void multiplicar(){
+        multi = num1*num2;
+    }
+    //Método para dividir los dos números
+    public void dividir(){
+        divi = num1/num2;
+    }
+    //Mostrar el resultado en pantalla
+    public void mostrarResultado(){
+        System.out.println("La suma es: "+suma);
+        System.out.println("La resta es: "+resta);
+        System.out.println("La multiplicación es: "+multi);
+        System.out.println("La division es: "+divi);
+    }
+}
