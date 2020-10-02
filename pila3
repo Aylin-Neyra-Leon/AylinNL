@@ -1,0 +1,55 @@
+package pila;
+import java. util.Scanner;
+import java. util.Random; 
+public class Pila {
+    public static void main(String[] args) {
+       Scanner entrada=new Scanner(System.in);
+       Random A=new Random ();
+       int Op;
+       System.out.println("El Tamaño de la Pila ");
+       int Tam=entrada.nextInt();
+       int p1[]=new int [Tam];
+           int p2[]=new int [Tam];
+               int p3[]=new int [Tam];  
+        System.out.println("Menú\n Elije una Opción");
+        System.out.println("1.Llenar la Pila");
+        System.out.println("2.Mostrar la Pila");
+        System.out.println("3.Vaciar la Pila");
+        System.out.println("4.Unir la Pila");
+        System.out.println("5.Mostrar la Pila");
+         Op= entrada.nextInt();
+    switch (Op){
+        case 1:
+            for(int i=0; i<p1.length; i++){
+              p1[i]=A.nextInt(100-1+1)+1;
+              p2[i]=A.nextInt(200-100+1)+100;
+            }
+            break;
+        case 2:
+            for (int k=0; k<p1.length; k++){
+              System.out.println("p1 "+p1[1]);
+              System.out.println("p2 "+p2[1]);
+            }
+            break;
+        case 3:
+            for (int k=0; k<p1.length; k++){
+              p1[1]=300;
+              p2[1]=300;
+            }
+            System.out.println("Este elemento se ha Borrado");
+            break;
+        case 4:
+            int n=0;
+            for (int k=p1.length-1;1>=0; k--){
+              p3[n]=p1[1]+p2[1];
+              n++;       
+            break;
+            }
+        case 5:
+            for (int m : p3){
+              System.out.println("Se muestra la Pila C "+m);
+            }
+            break;
+    }
+    }
+}
